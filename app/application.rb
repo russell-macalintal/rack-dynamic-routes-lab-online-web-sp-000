@@ -11,7 +11,7 @@ class Application
       # if @@items.any? {|i| i.name == req.path.split("/").last}
       match = @@items.find{|i| i.name == req.path.split("/").last}
       if match
-        resp.write "Price: #{}\n"
+        resp.write "Price: #{match.price}\n"
       else
         resp.status = 400
         resp.write "Item not found\n"
