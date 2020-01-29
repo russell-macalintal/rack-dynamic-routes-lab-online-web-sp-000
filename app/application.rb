@@ -13,8 +13,8 @@ class Application
       if match
         resp.write "Price: #{}\n"
       else
-        resp.write "Item not found\n"
         resp.status = 400
+        resp.write "Item not found\n"
       end
     else
       resp.status = 404
